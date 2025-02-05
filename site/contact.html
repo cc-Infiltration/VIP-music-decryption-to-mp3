@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+   <script>
+      var _hmt = _hmt || [];
+      (function() {
+         var hm = document.createElement("script");
+         hm.src = "https://hm.baidu.com/hm.js?c1780a0b7159c3e0f401cc229e5e6700";
+         var s = document.getElementsByTagName("script")[0];
+         s.parentNode.insertBefore(hm, s);
+      })();
+   </script>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>联系我们</title>
+   <meta name="csrf-param" content="_csrf">
+   <meta name="csrf-token" content="CdDLsp0kckkg0lHHQV4QoRFxyy9HenfOBIJui38t_l5Ctr7e110QfmiTOrAULEnKIB6eQCENQJ5b2DrdPHqGNw==">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <link href="css/site.css" rel="stylesheet">
+   <script src="assets/jquery.js"></script>
+   <script src="assets/yii.js"></script>
+</head>
+
+<body>
+   <div class="wrap">
+      <nav id="w0" class="navbar-default navbar-fixed-top navbar">
+         <div class="container">
+            <div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span></button><a class="navbar-brand" href="/">橙芯云音乐</a></div>
+            <div id="w0-collapse" class="collapse navbar-collapse">
+               <ul id="w1" class="navbar-nav navbar-right nav">
+                  <li><a href="index.html">首页</a></li>
+                  <li><a href="site/formats.html">支持格式</a></li>
+                  <li><a href="site/faq.html">常见问题</a></li>
+                  <li><a href="site/tutorial.html">教程</a></li>
+                  <li class="active"><a href="site/contact.html">联系</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="container">
+         <ul class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li class="active">联系我们</li>
+         </ul>
+         <div class="site-contact">
+            <h1>联系我们</h1>
+            <p>
+               如果您对本网站有任何疑问，请填写以下内容联系我们。
+            </p>
+            <div class="row">
+               <div class="col-lg-5">
+                  <form id="contact-form" action="site/contact.htm" method="post">
+                     <input type="hidden" name="_csrf" value="CdDLsp0kckkg0lHHQV4QoRFxyy9HenfOBIJui38t_l5Ctr7e110QfmiTOrAULEnKIB6eQCENQJ5b2DrdPHqGNw==">
+                     <div class="form-group field-contactform-name required">
+                        <label class="control-label" for="contactform-name">名字</label>
+                        <input type="text" id="contactform-name" class="form-control" name="ContactForm[name]" autofocus aria-required="true">
+                        <p class="help-block help-block-error"></p>
+                     </div>
+                     <div class="form-group field-contactform-email required">
+                        <label class="control-label" for="contactform-email">邮箱</label>
+                        <input type="text" id="contactform-email" class="form-control" name="ContactForm[email]" aria-required="true">
+                        <p class="help-block help-block-error"></p>
+                     </div>
+                     <div class="form-group field-contactform-subject required">
+                        <label class="control-label" for="contactform-subject">主题</label>
+                        <input type="text" id="contactform-subject" class="form-control" name="ContactForm[subject]" aria-required="true">
+                        <p class="help-block help-block-error"></p>
+                     </div>
+                     <div class="form-group field-contactform-body required">
+                        <label class="control-label" for="contactform-body">反馈内容</label>
+                        <textarea id="contactform-body" class="form-control" name="ContactForm[body]" rows="6" aria-required="true"></textarea>
+                        <p class="help-block help-block-error"></p>
+                     </div>
+                     <div class="form-group">
+                        <button type="submit" class="btn btn-primary" name="contact-button">提交</button> </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+   <footer class="footer-container">
+      <div align="center" class="footer-info">
+         <span>付费音乐下载后如何永久畅听？这里给你答案！</span>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+            <p class="pull-left">&copy; chengxin.com 2024</p>
+            <p class="pull-right">这个网站是开源的</p>
+         </div>
+      </div>
+   </footer>
+   <script src="assets/contact/yii.validation.js"></script>
+   <script src="assets/contact/yii.captcha.js"></script>
+   <script src="assets/contact/yii.activeForm.js"></script>
+   <script src="assets/contact/js/bootstrap.js"></script>
+   <script>
+      jQuery(function($) {
+         jQuery('#contactform-verifycode-image').yiiCaptcha({ "refreshUrl": "\/site\/captcha?refresh=1", "hashKey": "yiiCaptcha\/site\/captcha" });
+         jQuery('#contact-form').yiiActiveForm([{ "id": "contactform-name", "name": "name", "container": ".field-contactform-name", "input": "#contactform-name", "error": ".help-block.help-block-error", "validate": function(attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "名字必须填上" }); } }, {
+               "id": "contactform-email",
+               "name": "email",
+               "container": ".field-contactform-email",
+               "input": "#contactform-email",
+               "error": ".help-block.help-block-error",
+               "validate": function(attribute, value, messages, deferred, $form) {
+                  yii.validation.required(value, messages, { "message": "邮箱不能为空。" });
+                  yii.validation.email(value, messages, { "pattern": /^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/, "fullPattern": /^[^@]*<[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?>$/, "allowName": false, "message": "这貌似不是有效的邮箱地址", "enableIDN": false, "skipOnEmpty": 1 });
+               }
+            }, { "id": "contactform-subject", "name": "subject", "container": ".field-contactform-subject", "input": "#contactform-subject", "error": ".help-block.help-block-error", "validate": function(attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "主题不能为空" }); } }, { "id": "contactform-body", "name": "body", "container": ".field-contactform-body", "input": "#contactform-body", "error": ".help-block.help-block-error", "validate": function(attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "正文不能为空白" }); } }, { "id": "contactform-verifycode", "name": "verifyCode", "container": ".field-contactform-verifycode", "input": "#contactform-verifycode", "error": ".help-block.help-block-error", "validate": function(attribute, value, messages, deferred, $form); }
+         }], []);
+      });
+   </script>
+</body>
+
+</html>
